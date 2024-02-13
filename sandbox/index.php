@@ -1,4 +1,6 @@
 <?php
+include 'functions.php';
+
 $title = 'PHP Sandbox';
 
 $firstName = 'Chris';
@@ -7,7 +9,9 @@ $lastName = 'Sinko';
 
 $fullName = $firstName . ' ' . $lastName;
 
-$names = ['Chris', 'Matt', 'Paul', 'Dave']
+$names = ['Chris', 'Matt', 'Paul', 'Dave'];
+
+$result = add(1, 3);
 ?>
 
 <!DOCTYPE html>
@@ -22,6 +26,8 @@ $names = ['Chris', 'Matt', 'Paul', 'Dave']
 <body>
     <h1><?= $title ?></h1>
 
+    <h2><?= sayHello($firstName) ?></h2>
+
     <p>
         Names:
         <br>
@@ -30,6 +36,11 @@ $names = ['Chris', 'Matt', 'Paul', 'Dave']
             <li><?= $name ?></li>
         <?php endforeach; ?>
     </ul>
+
+    <br>
+    Result: <?= $result ?>
+    <br>
+    Sum = <?= sum(1, 2, 3, 4) ?>
     </p>
 </body>
 
